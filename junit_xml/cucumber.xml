@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="11.12" tests="10" skipped="0" failures="0" errors="0">
+<testcase classname="Reqres GET Api feature" name="Get Api to list all users" time="4.613">
+<system-out><![CDATA[
+Given provide valid endpoint to fetch all users.............................passed
+When send the request to the server.........................................passed
+Then I validate the response statuscode 200.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Reqres GET Api feature" name="Reqres Get api to search with different page numbers using scenario outline - Example #1.1" time="1.893">
+<system-out><![CDATA[
+Given provide valid endpoint to fetch all users.............................passed
+When send the request to the server with page number as 1...................passed
+Then I verify the respnse status code 200...................................passed
+And I verify the first user record having email as "george.bluth@reqres.in".passed
+]]></system-out>
+</testcase>
+<testcase classname="Reqres GET Api feature" name="Reqres Get api to search with different page numbers using scenario outline - Example #1.2" time="0.28">
+<system-out><![CDATA[
+Given provide valid endpoint to fetch all users.............................passed
+When send the request to the server with page number as 2...................passed
+Then I verify the respnse status code 200...................................passed
+And I verify the first user record having email as "michael.lawson@reqres.in".passed
+]]></system-out>
+</testcase>
+<testcase classname="Reqres GET Api feature" name="Get Api to list single user" time="0.388">
+<system-out><![CDATA[
+Given provide valid endpoint to fetch single user...........................passed
+When send the request to the server to feth single user.....................passed
+Then I validate the single user response statuscode 200.....................passed
+And I verify the rsponse body fields........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Reqres GET Api feature" name="Get Api for single user not found" time="0.506">
+<system-out><![CDATA[
+Given provide valid endpoint to single user not found.......................passed
+When send the request to the server single user not found...................passed
+Then I validate the singleusernotfoundresponse statuscode...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Reqres Delete Api feature" name="Delete API scenario" time="0.505">
+<system-out><![CDATA[
+Given I want to provide valid endpoint......................................passed
+When I send the request to the server.......................................passed
+Then I validate the delete response statuscode..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Reqres Post Api feature" name="reqres post api to create user scenario" time="0.573">
+<system-out><![CDATA[
+Given provide valid endpoint to create user.................................passed
+When I send the request to the server with requestbody......................passed
+Then I validate the create user response status code........................passed
+And validate the create user response body fields...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Reqres Post Api feature" name="reqres Post api to create more users - Example #1.1" time="0.571">
+<system-out><![CDATA[
+Given provide valid endpoint to create user.................................passed
+When I send the request to the server with requestbody as "morpheus" and "leader".passed
+Then I validate the create user response status code........................passed
+And validate the create user response body fields...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Reqres Post Api feature" name="reqres Post api to create more users - Example #1.2" time="0.529">
+<system-out><![CDATA[
+Given provide valid endpoint to create user.................................passed
+When I send the request to the server with requestbody as "Ramesh Ch" and "Automation Test lead".passed
+Then I validate the create user response status code........................passed
+And validate the create user response body fields...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Reqres PUT Api feature" name="Update user scenario" time="0.537">
+<system-out><![CDATA[
+Given I want to provide valid endpoint to update user.......................passed
+When I send a request to the server with valid request body to update.......passed
+Then I validate update user response status code............................passed
+And validate the update user response body fields...........................passed
+]]></system-out>
+</testcase>
+</testsuite>
